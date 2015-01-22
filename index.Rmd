@@ -28,7 +28,7 @@ knit        : slidify::knit2slides
 - The app requires both the shiny package and quantmod package. 
 - It relies on two key functions from quantmod package - getSymbols and chartSeries
 - The getSymbols function retrieve the information of the specified stock symbol (default source is Yahoo finance)
-```{r, echo=TRUE, eval=FALSE}
+```{r, eval=FALSE}
 library(quantmod)
 plotData<-getSymbols("GOOG", from="2014/12/01", to="2015/01/01", auto.assign=FALSE)
 ```
