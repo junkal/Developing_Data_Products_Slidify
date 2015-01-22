@@ -71,53 +71,14 @@
 </ul>
 
 <pre><code class="r">library(quantmod)
-</code></pre>
-
-<pre><code>## Warning: package &#39;quantmod&#39; was built under R version 3.1.2
-</code></pre>
-
-<pre><code>## Loading required package: xts
-</code></pre>
-
-<pre><code>## Warning: package &#39;xts&#39; was built under R version 3.1.2
-</code></pre>
-
-<pre><code>## Loading required package: zoo
-## 
-## Attaching package: &#39;zoo&#39;
-## 
-## The following objects are masked from &#39;package:base&#39;:
-## 
-##     as.Date, as.Date.numeric
-## 
-## Loading required package: TTR
-</code></pre>
-
-<pre><code>## Warning: package &#39;TTR&#39; was built under R version 3.1.2
-</code></pre>
-
-<pre><code>## Version 0.4-0 included new data defaults. See ?getSymbols.
-</code></pre>
-
-<pre><code class="r">plotData&lt;-getSymbols(&quot;GOOG&quot;, from=&quot;2014/12/01&quot;, to=&quot;2015/01/01&quot;, auto.assign=FALSE)
-</code></pre>
-
-<pre><code>##     As of 0.4-0, &#39;getSymbols&#39; uses env=parent.frame() and
-##  auto.assign=TRUE by default.
-## 
-##  This  behavior  will be  phased out in 0.5-0  when the call  will
-##  default to use auto.assign=FALSE. getOption(&quot;getSymbols.env&quot;) and 
-##  getOptions(&quot;getSymbols.auto.assign&quot;) are now checked for alternate defaults
-## 
-##  This message is shown once per session and may be disabled by setting 
-##  options(&quot;getSymbols.warning4.0&quot;=FALSE). See ?getSymbol for more details
+plotData&lt;-getSymbols(&quot;GOOG&quot;, from=&quot;2014/12/01&quot;, to=&quot;2015/01/01&quot;, auto.assign=FALSE)
 </code></pre>
 
 <ul>
 <li><strong>chartSeries</strong> plot the graph with the data retrieved from getSymbols</li>
 </ul>
 
-<pre><code class="r">chartSeries(plotData, type = &#39;candlesticks&#39;, name=&quot;Google&quot;)
+<pre><code class="r">chartSeries(plotData, type = &#39;candlesticks&#39;, name=&quot;Google&quot;,theme=chartTheme(&quot;white&quot;))
 </code></pre>
 
   </article>
